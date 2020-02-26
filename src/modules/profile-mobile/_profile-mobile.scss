@@ -1,0 +1,103 @@
+.profile-mobile {
+    color: $color-dark-blue;
+    visibility: hidden;
+    opacity: 0;        
+}
+
+@include md {
+    .profile-mobile {
+        background: white;
+        position: absolute;
+        top: 61px;
+        left: 0;
+        transition: 0.3s;
+        box-shadow: 0px 20px 26px #0000005C;
+        
+        &_active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        &__profile {
+            display: flex;
+            padding-right: 19px;   
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            box-sizing: border-box;  
+            border-bottom: 1px solid #B2BBC2;       
+        }
+
+        &__icon {
+            width: 44px;
+            height: 44px;
+            border: 1px solid #00203626;
+            border-radius: 50%;
+            background: #0020360D;
+            position: relative;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__client {
+
+            &-name {
+                font-size: 20px;
+                line-height: 100%;
+                opacity: 0.6;
+            }
+
+            &-number {
+                font-size: 14px;
+                line-height: 20px;
+                margin-top: 3px;
+                opacity: 0.6;
+            }
+        }
+
+        &__list {
+            @include undone-list;
+            background: #F2F2F2;            
+        }
+
+        &__item {
+            height: 49px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            padding-left: 15px;
+            padding-right: 17px;
+            border-bottom: 1px solid #B2BBC2;            
+        }
+
+        &__messege {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;                       
+
+            &-amount {
+                width: 22px;
+                height: 22px;
+                position: relative;
+                color: white;
+                background: $color-red;
+                background-position: center;
+                border-radius: 50%;
+                text-align: center;
+            }
+        }
+
+        &__button {
+            font-size: 16px;
+            color: $color-dark-blue;
+        }
+    }
+}
+
+@include sm {
+    .profile-mobile {
+        width: 100%;
+    }
+}

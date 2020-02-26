@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>@@browserTitle - Tourism</title>
+    <meta name="description" content="description">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+</head>
+<body class="page page_bg_grey">
+
+    @@include('./header/header-logged.html')
+
+    <div class="page__wrapper">
+        @@include('./aside/aside.html')
+
+        @@include('./tourism-product/tourism-product.html', {
+            "tour": true,
+            "flight": true,
+            "event": true,
+            "trip": true,
+            "confirm": true,
+            "class": "",
+            "class-container": ""
+        })
+    </div>    
+
+    @@include('./modal-booking/modal-booking.html')
+
+    @@include('./modal-discount/modal-discount.html')
+
+    @@include('./modal-order-num/modal-order-num.html')
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

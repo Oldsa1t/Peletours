@@ -1,0 +1,96 @@
+<section class="flight @@class">
+
+    <button class="button flight__chevron">
+        <h2 class="title title__h2 flight__title">פרטי הטיסה</h2>
+    </button>
+
+    <div class="flight__wide-wrapper">
+        <div class="flight__wrapper">
+            <div class="flight__container">
+                <div class="flight__details">
+        
+                    <div class="flight__departure">
+            
+                        <div class="flight__company">
+                            @@include('./img/img.html', {
+                                "class": "flight__image-wrapper",
+                                "img-class": "flight__image",
+                                "src": "assets/img/easy-jet.png"
+                            })
+                            <p class="text">איזיג'ט</p>
+                        </div>
+                        
+                        <div class="flight__day">
+                            <b class="text flight__day-value">21/1</b>
+                            <p class="text">שישי</p>
+                        </div>
+            
+                        <div class="flight__departure-details">
+                            <b class="flight__departure-time">20:55</b>
+                            <p class="text flight__departure-airport">tlv</p>
+                            <span class="flight__span flight__dayofweek">שישי</span>
+                        </div>
+            
+                        <div class="flight__arrival-details">
+                            <b class="flight__arrival-time">00:45</b>
+                            <p class="text flight__arrival-airport">bcn</p>
+                            <span class="flight__span flight__dayofweek">שבת</span>
+                        </div>
+                    </div>
+            
+                    <div class="flight__arrival">
+            
+                        <div class="flight__company">
+                            @@include('./img/img.html', {
+                                "class": "flight__image-wrapper",
+                                "img-class": "flight__image",
+                                "src": "assets/img/easy-jet.png"
+                            })
+                            <p class="text">איזיג'ט</p>
+                        </div>
+                        
+                        <div class="flight__day">
+                            <b class="text flight__day-value">21/1</b>
+                            <p class="text">שישי</p>
+                        </div>
+            
+                        <div class="flight__departure-details">
+                            <b class="flight__departure-time">20:55</b>
+                            <p class="text flight__departure-airport">bcn</p>
+                            <span class="flight__span flight__dayofweek">שני</span>
+                        </div>
+            
+                        <div class="flight__arrival-details">
+                            <b class="flight__arrival-time">00:45</b>
+                            <p class="text flight__arrival-airport">tlv</p>
+                            <span class="flight__span flight__dayofweek">שלישי</span>
+                        </div>
+                    </div>
+            
+                </div>
+            
+                <div class="flight__including">
+                    <h3 class="title title__h3 flight__title-h3">מה כלול בטיסה</h3>
+                    <div class="flight__including-wrapper">
+                        <div class="flight__food">לא</div>
+                        <div class="flight__carryon">
+                            <span class="flight__carryon-value">8</span>
+                            <span class="flight__span">ק"ג</span>
+                        </div>
+                        <div class="flight__luggage">
+                            <span class="flight__luggage-value">0</span>
+                            <span class="flight__span">ק"ג</span>
+                        </div>
+                        <div class="flight__plane">&mdash;</div>
+                    </div>
+                </div>
+            </div> 
+        </div>       
+    
+        <button class="button flight__add-btn">
+            <div class="tourism-product__add-btn"></div>
+            שעות נוספות        
+        </button>
+    </div>    
+    
+</section>

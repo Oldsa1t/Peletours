@@ -1,0 +1,15 @@
+@font-face {
+	font-family: "Open Sans Hebrew";
+	src: local("OpenSansHebrew-Regular"), url("../fonts/OpenSansHebrew-Regular.woff2") format("woff2"), url("../fonts/OpenSansHebrew-Regular.woff") format("woff");
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Open Sans Hebrew";
+	src: local("OpenSansHebrew-Bold"), url("../fonts/OpenSansHebrew-Bold.woff2") format("woff2"), url("../fonts/OpenSansHebrew-Bold.woff") format("woff");
+	font-display: swap;
+	font-style: normal;
+	font-weight: 700;
+}

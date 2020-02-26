@@ -1,0 +1,67 @@
+<nav class="navbar @@class">
+
+    <div class="navbar__container">
+
+        <section class="navbar__start">
+
+            <button class="button navbar__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="24" viewBox="0 0 30 24">
+                    <defs>
+                        <style>
+                            .a {
+                                fill: #002036;
+                            }
+                        </style>
+                    </defs>
+                    <path class="a"
+                        d="M29.8,80.427H.4a.4.4,0,0,1-.4-.4V78.4A.4.4,0,0,1,.4,78H29.8a.4.4,0,0,1,.4.4v1.618A.4.4,0,0,1,29.8,80.427Zm0,10.787H.4a.4.4,0,0,1-.4-.4V89.191a.4.4,0,0,1,.4-.4H29.8a.4.4,0,0,1,.4.4v1.618A.4.4,0,0,1,29.8,91.214ZM29.8,102H.4a.4.4,0,0,1-.4-.4V99.978a.4.4,0,0,1,.4-.4H29.8a.4.4,0,0,1,.4.4V101.6A.4.4,0,0,1,29.8,102Z"
+                        transform="translate(0 -78)" />
+                </svg>
+            </button>
+    
+            @@include('./logo/logo.html', {
+                "class": "navbar__logo",
+                "src": "assets/img/logo.png"
+            })  
+
+            <div class="navbar__search-wrapper">
+                <button class="button navbar__search-btn">
+                    <span class="navbar__span">חיפוש</span>
+                    <div class="navbar__loupe"></div>
+                </button>           
+    
+                @@include('./search/search.html', {
+                    "class": "navbar__search"
+                })
+            </div>           
+    
+        </section>
+    
+        @@include('./menu/menu.html', {
+            "class": "navbar__menu"
+        })
+
+    </div>      
+
+    <div class="navbar__wrapper">
+
+        @@include('./link/link.html', {
+            "class": "navbar__support", 
+            "href": "",
+            "text": "תמיכה"
+        })
+
+        <section class="navbar__login">
+            
+            <a class="link navbar__sign-up" href="sign-up.html">
+                הרשם
+            </a>
+            <a class="link navbar__sign-in" href="sign-in.html">
+                התחבר
+            </a>
+
+        </section>
+
+    </div>    
+
+</nav>

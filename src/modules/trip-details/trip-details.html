@@ -1,0 +1,80 @@
+<section class="trip-details @@class">
+
+    <div class="trip-details__cover">
+        <div class="trip-details__header">
+            @@include('./logo/logo.html', {
+                "class": "trip-details__logo",
+                "src": "assets/img/small-logo.png"
+            })
+            <button class="button trip-details__close">           
+                <img src="assets/img/close.svg" alt="">            
+            </button>
+        </div>
+    
+        <div class="trip-details__container">
+            <div class="trip-details__caption">
+                <span class="trip-details__span">מחיר:</span>
+                <h2 class="title title__h2 trip-details__title">
+                    <span class="trip-details__price">2596</span>
+                    <span class="trip-details__current">ש"ח</span>
+                </h2>
+            </div>
+        
+            <div class="trip-details__commission">
+                <div class="trip-details__commission-wrapper">
+                    <p class="text trip-details__text">מתוך זה עמלה:</p>
+                    <b class="trip-details__commission-value">259</b>&nbsp;
+                    <b class="trip-details__commission-current">ש"ח</b>
+                </div>
+                <button class="button trip-details__discount">תן הנחה</button>        
+            </div>
+        
+            <form class="trip-details__form" action="">
+                <div class="trip-details__dates">
+                    <label class="trip-details__label" for="">תאריכים</label>
+                    <input class="input trip-details__input trip-details__daterangepicker" type="text">
+                </div>
+        
+                <div class="trip-details__passangers">
+                    <label class="trip-details__label" for="">נוסעים</label>
+                    <input class="input trip-details__input" type="text">
+                </div>
+        
+                <div class="trip-details__people">
+                    <div class="trip-details__labels">
+                        <span class="trip-details__labels-item">חדרים</span>
+                        <span class="trip-details__labels-item">מבוגרים</span>
+                        <span class="trip-details__labels-item">ילדים 2-12</span>
+                        <span class="trip-details__labels-item">תינוקות 0-2</span>
+                    </div>
+    
+                    <div class="trip-details__wrapper">
+                        <div class="trip-details__inputs">
+                            <div class="trip-details__inputs-item trip-details__room">חדר 1</div>
+                            <input class="input trip-details__inputs-item" type="number">
+                            <input class="input trip-details__inputs-item" type="number">
+                            <input class="input trip-details__inputs-item" type="number">
+                        </div>
+            
+                        <div class="trip-details__inputs">
+                            <div class="trip-details__inputs-item trip-details__room">חדר 2</div>
+                            <input class="input trip-details__inputs-item" type="number">
+                            <input class="input trip-details__inputs-item" type="number">
+                            <input class="input trip-details__inputs-item" type="number">
+                        </div>
+                    </div> 
+                    
+                    <button class="button trip-details__add-room">
+                        <div class="tourism-product__add-btn"></div>
+                        <span class="trip-details__span">הוסף חדר</span>
+                    </button>
+                </div>
+            </form>
+        
+            <button class="button trip-details__confirm @@confirm">        
+                הזמן
+            </button>
+        </div>  
+    </div>     
+
+</section>

@@ -1,0 +1,10 @@
+.logo {
+    width: 310px;
+    height: 50px;
+}
+
+@include sm {
+    .logo {
+        width: 250px;
+    }
+}

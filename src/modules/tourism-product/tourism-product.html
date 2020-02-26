@@ -1,0 +1,166 @@
+<main class="tourism-product @@class">
+
+    @@if(context.tour == true) {
+        <section class="tourism-product__gallery">
+            @@loop('./img/img.html',[
+            {
+                "class": "tourism-product__image-wrapper tourism-product__image-wrapper-1",
+                "img-class": "tourism-product__image",
+                "src": "assets/img/pool-hotel.png"
+            },
+            {
+                "class": "tourism-product__image-wrapper tourism-product__image-wrapper-2",
+                "img-class": "tourism-product__image",
+                "src": "assets/img/hotel.png"
+            },
+            {
+                "class": "tourism-product__image-wrapper tourism-product__image-wrapper-3",
+                "img-class": "tourism-product__image",
+                "src": "assets/img/hall.png"
+            },
+            {
+                "class": "tourism-product__image-wrapper tourism-product__image-wrapper-4",
+                "img-class": "tourism-product__image",
+                "src": "assets/img/terrace.png"
+            },
+            {
+                "class": "tourism-product__image-wrapper tourism-product__image-wrapper-5",
+                "img-class": "tourism-product__image",
+                "src": "assets/img/pool-croped.png"
+            }
+            ])
+    
+            <a class="link tourism-product__more-photo" href=""></a>
+        </section>
+    }
+    
+    @@if(context.sport == true) {
+        <section class="tourism-product__teams">
+            @@include('./img/img.html', {
+                "class": "tourism-product__teams-wrapper",
+                "img-class": "tourism-product__teams-img tourism-product__teams-img_1",
+                "src": "assets/img/team-product-1.png"
+            })
+            @@include('./img/img.html', {
+                "class": "tourism-product__teams-wrapper",
+                "img-class": "tourism-product__teams-img tourism-product__teams-img_2",
+                "src": "assets/img/team-product-2.png"
+            })
+        </section>
+    }
+
+    <div class="tourism-product__container @@class-container">
+
+        <div class="tourism-product__wrapper">
+
+            <div class="tourism-product__wrapper-right">
+                @@if(context.tour == true) {
+                    @@include('./destination/destination.html', {
+                        "class": "tourism-product__destination"
+                    })
+                }
+                @@if(context.sport == true) {
+                    @@include('./match/match.html', {
+                        "class": "tourism-product__match"
+                    })
+                }
+
+                @@if(context.sport == true) {
+                    @@include('./stadium/stadium.html', {
+                        "class": "tourism-product__stadium",
+                        "plus": "@@plus",
+                        "minus": "@@minus"
+                    })
+                }
+                
+                @@if(context.flight == true) {
+                    @@include('./flight/flight.html',{
+                        "class": "tourism-product__flight"
+                    })
+    
+                    @@include('./hotel/hotel.html', {
+                        "class": "tourism-product__hotel @@hotel"
+                    })
+                }
+                
+                @@if(context.event == true) {
+                    @@include('./event-details/event-details.html', {
+                        "class": "tourism-product__event-details",
+                        "tour": true,
+                        "place" : {
+                            "value": "אריאנה גרנדה",
+                            "time": "פתיחת דלתות 21:00"
+                        },
+                        "site": "יציע עליון"
+                    })
+                }
+                
+            </div>
+
+            @@if(context.ticket == true) {
+                @@include('./ticket/ticket.html', {
+                    "class" : "tourism-product__ticket"
+                })
+            }
+
+            @@if(context.trip == true) {
+                @@include('./trip-details/trip-details.html', {
+                    "class": "tourism-product__trip-details",
+                    "confirm": "@@class-confirm"
+                })
+            }            
+
+        </div>
+
+        @@if(context.travel == true) {
+            @@include('./travel-package/travel-package.html', {
+                "class": "tourism-product__travel-package",
+                "container": "",
+                "slider": "owl-carousel js-travel-package",
+                "prev": "",
+                "next": "",
+                "normal": true
+            })
+        }        
+
+        @@include('./entertainment/entertainment.html', {
+            "class": "tourism-product__entertainment @@entertainment"
+        })
+    </div>  
+
+    @@if(context.confirm == true) {
+        <section class="tourism-product__mobile-confirm">
+            <div class="tourism-product__mobile-wrapper">
+                <b class="tourism-product__price">2596</b>
+                <span class="tourism-product__span">ש"ח</span>
+            </div>
+    
+            <button class="button tourism-product__button">הזמן</button>
+        </section>   
+    }   
+    
+    @@if(context.ticket == true) {
+        <section class="tourism-product__ticket-panel">
+            <div class="tourism-product__ticket-wrapper">
+                <b class="tourism-product__ticket-price">680</b>
+                <span class="tourism-product__ticket-span">ש"ח</span>
+            </div>
+    
+            <button class="button tourism-product__ticket-button">הזמן</button>
+        </section>  
+    }
+</main>
+
+@@if(context.travel == true) {
+    @@include('./travel-package/travel-package.html', {
+        "class": "tourism-product__travel-package-modal",
+        "container": "tourism-product__travel-package-container",
+        "slider": "owl-carousel js-travel-package-modal",
+        "prev": "tourism-product__control-prev",
+        "next": "tourism-product__control-next",
+        "modal": true
+    })
+}  
+
+
+

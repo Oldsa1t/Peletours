@@ -1,0 +1,39 @@
+@import '../../../node_modules/owl.carousel/dist/assets/owl.carousel.min';
+@import '../../libs/jquery-ui/theme';
+@import '../../../node_modules/jquery-ui/themes/base/datepicker';
+@import '../../../node_modules/daterangepicker/daterangepicker';
+
+@import 'import/mixins';
+@import 'import/variables';
+
+@import 'common/fonts';
+@import 'common/iconfont';
+@import 'common/template';
+
+@import '../../modules/title/title';
+@import '../../modules/img/img';
+@import '../../modules/logo/logo';
+@import '../../modules/link/link';
+@import '../../modules/button/button';
+@import '../../modules/menu/menu';
+@import '../../modules/aside/aside';
+@import '../../modules/profile/profile';
+@import '../../modules/profile-mobile/profile-mobile';
+@import '../../modules/navbar/navbar';
+@import '../../modules/navbar-mobile/navbar-mobile';
+@import '../../modules/balance/balance';
+@import '../../modules/category-slider/category-slider';
+@import '../../modules/destination/destination';
+@import '../../modules/trip-details/trip-details';
+@import '../../modules/flight/flight';
+@import '../../modules/hotel/hotel';
+@import '../../modules/event-details/event-details';
+@import '../../modules/entertainment/entertainment';
+@import '../../modules/modal-booking/modal-booking';
+@import '../../modules/modal-discount/modal-discount';
+@import '../../modules/modal-order-num/modal-order-num';
+
+@import '../../modules/search/search';
+@import '../../modules/header/header';
+@import '../../modules/aside/aside';
+@import '../../modules/tourism-product/tourism-product';

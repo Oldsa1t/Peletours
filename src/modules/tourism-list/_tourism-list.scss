@@ -1,0 +1,152 @@
+.tourism-list {
+    flex-basis: 32%;
+
+    &__title {
+        font-size: 20px;
+        margin-bottom: 11px;
+    }
+
+    &__container {
+        min-height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+
+    &__item {
+        width: calc(50% - 10px);
+        min-height: 240px;
+        text-align: center;
+        background: white;        
+    }
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 44px;
+            height: 44px;
+            background: $normal;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform: translate(-50%);
+            z-index: 5;
+        }
+
+        &::after {
+            content: "";
+            width: 11px;
+            height: 20px;
+            background: url(../img/chevron-left-light.svg) no-repeat;
+            position: absolute;
+            bottom: calc(50% + 10px);
+            left: 50%;
+            transform: translate(-50%);
+            z-index: 5;
+        }
+    }
+
+    &__img {
+        background: grey;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: $color-dark-blue;
+            opacity: 0.4;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    &__image {
+        object-fit: fill;       
+    }
+
+    &__place {
+        position: absolute;
+        color: white;
+        font-size: 21px;      
+    }
+
+    &__info {
+        width: 110px;
+        height: 55%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        margin: 0 auto;    
+        padding-top: 10px;
+        box-sizing: border-box;    
+    }
+
+    &__product-name {
+        font-size: 16px;
+    }
+
+    &__price {
+        font-size: 24px;
+    }
+}
+
+@include md {
+    .tourism-list {
+        width: 100%;
+        margin-top: 50px;
+
+        &__item {
+            width: auto;
+            flex-basis: calc(50% - 10px);
+        }
+
+        &__image {
+            width: 100%;
+            height: 99px;
+            object-fit: cover;
+        }
+    }
+}
+
+@include sm {
+    .tourism-list {
+        margin-top: 30px;
+
+        &__title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        &__info {
+            padding-top: 20px;
+        }
+
+        &__item {
+            width: calc(50% - 8px);
+        }
+
+        &__image {
+            width: 100%;
+            height: 99px;
+            object-fit: fill;
+        }
+
+        &__price {
+            font-size: 20px;
+        }
+    }
+}

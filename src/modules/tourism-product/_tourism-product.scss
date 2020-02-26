@@ -1,0 +1,432 @@
+.tourism-product {
+    width: 100%;
+    overflow: hidden;    
+
+    &__gallery {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: stretch;
+        position: relative;
+    }
+
+    &__more-photo {
+        width: 185px;
+        height: 44px;
+        line-height: 44px;
+        font-size: 20px;
+        font-weight: bold; 
+        text-align: center;       
+        color: $normal;
+        background: white;
+        border: 1px solid $normal;
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        transition: .3s;
+
+        &:hover {
+            color: $hover;
+        }
+
+        &::before {
+            content: "עוד תמונות";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right;
+
+        &-wrapper {
+            flex: 1 1 auto;
+            height: 100%;
+
+            &:not(:last-child) {
+                margin-left: 2px;
+            }
+
+            &-1,
+            &-4 {
+                flex-basis: 32%;
+            }
+
+            &-2,
+            &-3{
+                flex-basis: 13%;
+            }
+
+            &-5 {
+                flex-basis: 10%;
+            }
+        }
+    }
+
+    &__teams {
+        max-width: 100%;
+        height: 149px;
+        background: $color-dark-blue;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;
+        box-sizing: border-box;
+
+        &-wrapper {
+            width: 149px;
+            height: 149px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+        }
+        &-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            object-position: center;
+            &_1 {
+                width: 117px;
+                height: 118px;
+            }
+            &_2 {
+                width: 83px;
+                height: 116px;
+            }
+        }
+    }
+
+    &__container {
+        width: 100%;
+        padding: 55px 100px 70px;
+        box-sizing: border-box;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        &-right {
+            flex-basis: 60%;
+        }
+    }
+
+    &__trip-details,
+    &__ticket {
+        flex-basis: calc(40% - 60px);
+    }
+
+    &__add-btn {
+        width: 30px;
+        height: 30px;
+        background: $color-dark-blue;
+        position: relative;
+        margin-left: 10px;
+        transition: .3s;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            background: url(../img/plus.svg) no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+    }
+
+    &__flight {
+        margin-top: 50px;
+    }
+
+    &__hotel {
+        margin-top: 80px; 
+        &_before {
+            &_none {
+                &::before {
+                    content: none;
+                    width: 0;
+                    height: 0;
+                }
+            }
+        }
+    }
+
+    &__event-details {
+        margin-top: 100px;
+    }
+
+    &__entertainment {        
+        margin-top: 120px;
+        &_margin-top {
+            &_100 {
+                margin-top: 100px;
+            }
+        }
+    }
+
+    &__mobile-confirm {
+        display: none;
+    }
+
+    &__sports {
+        padding: 60px 100px;
+        box-sizing: border-box;
+
+        &-container {
+            padding: 0;
+            margin-top: 41px;
+        }
+    }
+
+    &__stadium {
+        margin-top: 50px;
+    }
+
+    &__travel-package {
+        margin-top: 88px;
+        &-modal {
+            max-height: 100%;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba($color: #000000, $alpha: .5);
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            overflow: auto;
+            z-index: 30;
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s;
+            &_active {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        &-container {
+            width: 100%;
+            max-width: 1140px;
+            text-align: center;
+            background: white;
+            box-shadow: 0px 3px 26px #0000005C;
+            border: 1px solid #DFE0E3;
+            padding: 43px 75px 55px;
+            box-sizing: border-box;
+            margin: auto;
+        }
+    }
+
+    &__control {
+        &-prev {
+            width: 60px;
+            right: -75px;
+        }
+        &-next {
+            width: 60px;
+            left: -75px;
+        }
+    }
+
+    &__ticket {
+        &-panel {
+            display: none;
+        }
+    }
+}
+
+@include md {
+    .tourism-product {
+        &__container {
+            padding: 30px 30px 80px;
+        }
+
+        &__teams {
+            padding: 0;
+        }
+
+        &__wrapper-right {
+            flex-basis: 100%;
+        }
+
+        &__mobile-confirm {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            padding-left: 10px;
+            padding-right: 15px;
+            box-sizing: border-box;
+            margin-top: 30px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+        }
+
+        &__price {
+            font-size: 36px;
+        }
+
+        &__span {
+            font-size: 24px;
+        }
+
+        &__button {
+            width: 124px;
+            height: 44px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            background: $normal;
+            cursor: pointer;
+        }
+
+        &__ticket {
+            &-panel {
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: white;
+                padding-left: 10px;
+                padding-right: 15px;
+                box-sizing: border-box;
+                margin-top: 30px;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 2;
+            }
+    
+            &-price {
+                font-size: 36px;
+            }
+    
+            &-span {
+                font-size: 24px;
+            }
+    
+            &-button {
+                width: 124px;
+                height: 44px;
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                background: $normal;
+                cursor: pointer;
+            }
+        }
+        &__sports {
+            padding: 0;
+            &-container {
+                padding: 30px;
+                padding-bottom: 60px;
+            }
+        }
+    }
+}
+
+@include sm {
+    .tourism-product {
+        &__gallery {
+            height: 213px;
+        }
+
+        &__image {
+            object-position: center;
+
+            &-wrapper {
+                &-1 {
+                    flex-basis: 100%;
+                }
+
+                &-2,
+                &-3,
+                &-4,
+                &-5 {
+                    display: none;
+                }
+            }
+        }
+
+        &__more-photo {
+            width: 44px;
+            height: 44px;
+            left: 10px;
+            bottom: 10px;
+
+            &::before {
+                content: "";
+                width: 18px;
+                height: 18px;
+                background: url(../img/plus.svg) no-repeat;
+                background-position: center;
+                background-size: contain;
+                filter: invert(58%) sepia(43%) saturate(7491%) hue-rotate(170deg) brightness(96%) contrast(83%);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+
+        &__container {
+            padding: 0 0 80px;
+        }
+
+        &__destination {
+            padding-right: 20px;
+            padding-top: 20px;
+            box-sizing: border-box;
+        }
+
+        &__flight {
+            margin-top: 55px;
+        }
+
+        &__hotel {
+            margin-top: 55px;
+        }
+
+        &__event-details {
+            margin-top: 60px;
+        }
+
+        &__entertainment {
+            margin-top: 55px;
+        }
+
+        &__travel-package {             
+            &-container {
+                padding: 50px 0;
+            }
+        }
+
+        &__control {
+            &-prev {
+                width: 28px;
+                right: 0;
+            }
+            &-next {
+                width: 28px;
+                left: 0;
+            }
+        }
+    }
+}

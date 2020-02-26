@@ -1,0 +1,140 @@
+.category-slider {   
+    overflow: hidden; 
+    position: relative;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down;
+
+        &-wrapper {
+            height: 202px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }    
+
+    &__info {
+        height: 75px;
+        background: #F5F5F5;
+        display: flex;
+        align-items: center;
+        padding-left: 17px;
+        padding-right: 17px;
+        box-sizing: border-box;
+        border-top: 1px solid #B2BBC2;
+        
+    }
+
+    &__link {
+        width: 100%;
+        position: relative;
+        
+        &::before {
+            content: "";
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: $normal;
+            position: absolute;
+            left: 10px;
+            top: 2px;
+        }
+
+        &::after {
+            content: "";
+            width: 44px;
+            height: 44px;
+            background: url(../img/chevron-left-light.svg) no-repeat;
+            position: absolute;
+            left: 25px;
+            top: 15px;
+            
+        }
+    }
+
+    &__product-name {
+        font-size: 16px;
+    }
+
+    &__price {
+        font-size: 24px;
+    }
+
+    &__controls {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;     
+    }
+
+    &__control {
+        height: 100%;   
+        width: 70px;
+        background: #eaebed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: absolute;
+
+        &_prev {
+            top: 0;
+            right: -90px;
+            transform: rotate(180deg);
+        }
+
+        &_next {
+            top: 0;
+            left: -90px;
+        }
+
+        &:hover {
+            background: white;
+        }
+
+        &_disabled {
+            background: $disabled;
+        }
+    }
+
+    &__text {
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 1;
+        cursor: pointer;
+        
+    }
+}
+
+@include md {
+    .category-slider {
+        &__control {
+            width: 28px;
+            z-index: 2;
+            background: rgba($color: #eaebed, $alpha: .5);
+    
+            &_prev {
+                top: 0;
+                right: 0;
+                transform: rotate(180deg);
+            }
+    
+            &_next {
+                top: 0;
+                left: 0;
+            }
+
+            img {
+                width: 14px;
+            }
+        }
+    }
+}

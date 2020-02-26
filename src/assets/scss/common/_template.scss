@@ -1,0 +1,89 @@
+.page {
+    direction: rtl;
+    font-family: "Open Sans Hebrew";
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    color: $color-dark-blue;
+    position: relative;
+    padding-top: 69px;
+
+    @include md {
+        padding-top: 61px;
+    }
+
+    &_bg_grey {
+        background: #DFE0E3;
+    }
+
+    &_padding {
+        &_none {            
+            padding: 0;
+        }
+    } 
+    
+    &__wrapper {
+        display: flex;
+    }
+}
+
+.text {
+    margin: 0;
+}
+
+.input {
+    width: 100%;
+    font-family: $font-family;
+    font-size: 18px;
+    color: $color-dark-blue;
+    outline: none;
+    height: 44px;
+    line-height: 100%;
+    box-sizing: border-box;  
+    border: 1px solid #B2BBC2;  
+    padding: 0 15px;
+}
+
+.label {
+    font-size: 16px;
+    display: block;
+    color: $color-dark-blue;
+}
+
+.facebook {
+    transition: .3s;
+    &:hover {
+        fill: $hover;
+    }
+}
+
+.instagram {
+    transition: .3s;
+    &:hover {
+        fill: $hover;
+    }
+}
+
+.sms {
+    transition: .3s;
+    &:hover {
+        fill: $hover;
+    }
+}
+
+.whatsapp {
+    transition: .3s;
+    &:hover {
+        fill: $hover;
+    }
+}
+
+.owl-carousel .owl-item {
+    transform: none;
+}
+
+@include sm {
+    .page {
+        font-size: 16px;
+    }
+}

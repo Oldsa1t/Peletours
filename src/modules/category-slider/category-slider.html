@@ -1,0 +1,58 @@
+<div class="category-slider @@class">    
+
+    @@include('./img/img.html', {
+        "class": "category-slider__img-wrapper @@img-wrapper-class",
+        "img-class": "category-slider__img @@img-class",
+        "src": "@@src"
+    })  
+
+    @@if (context.tour === true) {
+        <div class="tourism__info">
+            <a class="link tourism__info-link" href="tourism-category.html">
+                <b class="tourism__info-place">@@place</b>
+                <div class="tourism__info-offers">
+                    <span class="tourism__offers-value">306</span>
+                    <span class="tourism__span">הצעות</span>
+                </div>
+                <div class="tourism__info-price">
+                    <span class="tourism__span">החל מ</span>
+                    <span class="tourism__price-value">$159</span>
+                </div>
+            </a>            
+        </div>        
+    }
+
+    @@if (context.info === true) {
+        <div class="category-slider__info-block">
+
+            @@loop('./category-slider/__info/__info.html', [            
+            {
+                "href": "@@href.1",
+                "text": "שם המוצר @@text.1",
+                "price": "@@price.1"
+            },
+            {
+                "href": "@@href.2",
+                "text": "שם המוצר @@text.2",
+                "price": "@@price.2"
+            },
+            {
+                "href": "@@href.3",
+                "text": "שם המוצר @@text.3",
+                "price": "@@price.3"
+            }
+            ])        
+    
+        </div> 
+    }      
+    
+    @@if (context.tourprod === true) {
+        <a class="link category-slider__text">                
+            @@text
+        </a> 
+    }   
+
+</div>
+
+    
+

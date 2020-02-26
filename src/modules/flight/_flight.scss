@@ -1,0 +1,445 @@
+.flight {
+    font-size: 16px;    
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $color-line;
+        position: absolute;
+        bottom: -45px;
+        left: 0;
+    }
+
+    &__chevron {
+        margin-right: 30px;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 11px;
+            height: 18px;
+            background: url(../img/chevron.svg) no-repeat;
+            background-size: contain;
+            background-position: center;
+            position: absolute;
+            top: 5px;
+            right: -25px;
+            transform: rotate(-90deg);
+            transition: .3s;
+        }
+
+        &_active {
+
+            &::before {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    &__details {
+        flex-basis: calc(60% - 15px);
+        background: #F5F5F5;
+        padding: 18px 20px 10px 25px;
+        box-sizing: border-box;        
+    }
+
+    &__departure {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: space-between;
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: $color-line;
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+        }
+
+        &-details {
+            height: 50px;
+            display: flex;  
+            position: relative;  
+            flex-basis: 45%;
+
+            @include sm {
+                flex-direction: column;
+                flex-basis: auto;
+            }
+        }
+
+        &-time {
+            font-size: 20px;
+        }
+
+        &-airport {
+            text-transform: uppercase;
+            position: absolute;
+            right: 0;
+            top: 26px;
+            @include sm {
+                position: static;
+            }        
+        }
+    }
+
+    &__dayofweek {
+        margin-top: 5px;
+        margin-right: 7px;
+    }
+
+    &__company {
+        width: 40px;
+        margin-left: 40px;
+    }
+
+    &__image {
+        max-width: 100%;
+        max-height: 100px;
+        object-fit: contain;
+
+        &-wrapper {
+            height: 40px;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__day {
+        margin-left: 50px;
+
+        &-value  {
+            font-size: 20px;
+        }
+    }   
+
+    &__arrival {
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+        justify-content: space-between;
+
+        &-details {
+            width: 100px;
+            height: 50px;
+            display: flex;
+            margin-right: auto;
+            position: relative;
+
+            @include sm {
+                flex-direction: column;
+            }
+
+            &::before {
+                content: "";
+                width: 85px;
+                height: 2px;
+                background: $color-line;
+                position: absolute;
+                top: 15px;
+                right: -95px;
+            }
+
+            @media screen and (max-width: 1700px) {
+                &::before {
+                    display: none;
+                }
+            }
+
+            @include md {
+                &::before {
+                    display: initial;
+                }
+            }
+            
+        }
+
+        &-time {
+            font-size: 20px;
+        }
+
+        &-airport {
+            text-transform: uppercase;
+            position: absolute;
+            right: 0;
+            top: 26px;    
+            @include sm {
+                position: static;
+            }        
+        }
+    }
+
+    &__including {
+        flex-basis: 40%;
+        background: #F5F5F5;
+        padding: 10px 20px 30px;
+        box-sizing: border-box;
+
+        &-wrapper {
+            width: 100%;
+            min-height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            margin-top: 45px;
+        }
+    }
+
+    &__title-h3 {
+        font-size: 20px;
+    }
+
+    &__food {
+        flex-basis: 60%;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 20px;
+            height: 21px;
+            background: url(../img/cutlery.svg) no-repeat;
+            position: absolute;
+            top: -30px;
+            right: 3px;
+        }
+    }
+
+    &__carryon {
+        flex-basis: 40%;
+        position: relative;
+        
+
+        &::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background: url(../img/bag.svg) no-repeat;
+            position: absolute;
+            top: -30px;
+            right: 5px;
+        }
+    }
+
+    &__luggage {
+        flex-basis: 60%;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 20px;
+            height: 18px;
+            background: url(../img/suitcase.svg) no-repeat;
+            position: absolute;
+            top: -30px;
+            right: 3px;
+        }
+    }
+
+    &__plane {
+        flex-basis: 40%;
+        position: relative;
+        padding-right: 10px;
+        box-sizing: border-box;
+
+        &::before {
+            content: "";
+            width: 25px;
+            height: 22px;
+            background: url(../img/plane-stroke.svg) no-repeat;
+            position: absolute;
+            top: -30px;
+            right: 5px;
+        }
+    }
+
+    &__add-btn {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        position: relative;
+        cursor: pointer;
+        transition: .3;
+
+        &:hover {
+            color: $hover;
+        }
+
+        &:hover > .tourism-product__add-btn {
+            background: $hover;
+        }
+    }
+}
+
+@include md {
+    .flight {
+
+        &__chevron {
+            margin-right: 30px;
+        }
+
+        &__container {
+            flex-wrap: wrap;
+        }
+
+        &__details {
+            flex-basis: 100%;
+            padding: 10px 15px 15px;
+        }
+
+        &__departure {
+            align-items: flex-start;
+        }
+
+        &__company {
+            margin-left: 50px;
+        }
+
+        &__arrival {
+
+            &-details {
+                &::before {
+                    content: "";
+                    width: 185px;
+                    height: 2px;
+                    background: $color-line;
+                    position: absolute;
+                    top: 15px;
+                    right: -235px;
+                }
+            }
+        }
+
+        &__including {
+            flex-basis: 100%;
+            margin-top: 10px;
+        }
+    }
+}
+
+@include sm {
+    .flight {
+        &::before {
+            bottom: -35px;
+        }
+
+        &__chevron {
+            margin-right: 50px;
+        }
+
+        &__details {
+            padding-bottom: 10px;
+        }
+
+        &__departure {
+            justify-content: flex-end;
+            
+            &-details {
+                width: auto;
+                height: auto;                
+            }
+
+            &-airport {
+                order: 3;
+            }
+        }
+
+        &__company {
+            margin: 0;
+            margin-left: auto;
+        }
+
+        &__day {            
+            margin-left: auto;
+        }
+
+        &__arrival {
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-top: 45px;
+
+            &-details {
+                width: auto;
+                height: auto;
+                margin-right: 60px;
+
+                &::before {
+                    content: "";
+                    width: 45px;
+                    height: 2px;
+                    background: $color-line;
+                    position: absolute;
+                    top: 15px;
+                    right: -55px;
+                }
+            }
+
+            &-airport {
+                order: 3;
+            }
+        }
+
+        &__span {
+            margin: 0;
+        }
+
+        &__including {
+            padding: 10px 20px 20px;
+
+            &-wrapper {
+                width: auto;
+                min-height: auto;
+                height: 70px;
+                margin-top: 15px;
+                margin-right: 40px;
+            }
+        }
+
+        &__food {
+    
+            &::before {
+                top: 0;
+                right: -40px;
+            }
+        }
+    
+        &__carryon {            
+    
+            &::before {
+                top: 0;
+                right: -30px;
+            }
+        }
+    
+        &__luggage {
+    
+            &::before {
+                top: 0;
+                right: -40px;
+            }
+        }
+    
+        &__plane {
+    
+            &::before {
+                top: 0;
+                right: -35px;
+            }
+        }
+
+        &__add-btn {
+            margin-right: 15px;    
+            margin-top: 15px;
+        }
+    }
+}

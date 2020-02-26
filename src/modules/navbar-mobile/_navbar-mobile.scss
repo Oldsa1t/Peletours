@@ -1,0 +1,161 @@
+.navbar-mobile {
+    display: none;
+}
+
+@include md {
+    .navbar-mobile {
+        display: block;
+        height: 60px;
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-right: 19px;
+        padding-top: 7px;
+        position: relative;
+        z-index: 10;
+
+        &__panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        &__menu-button {
+            width: 30px;
+            height: 24px;    
+            position: relative;                
+            
+            &::before {
+                content: "";
+                width: 30px;
+                height: 24px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background: url(../img/hamburger.svg) no-repeat;
+                transition: 0.3s;
+            }
+
+            &_active::before {
+                content: "";
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background: url(../img/close.svg) no-repeat;
+                transition: 0.3s;
+            }
+        }   
+        
+        &__search {
+            width: 100%;
+            position: absolute;
+            top: 62px;
+            right: 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: .3s;
+
+            &_active {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            &-btn {
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                right: 50px;
+                top: 0;
+    
+                &::before {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background: url(../img/search.svg) no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transition: .3s;
+                }
+    
+                &_active {
+                    width: 24px;
+                    height: 24px;
+                    position: absolute;
+                    right: 50px;
+                    top: 0;
+    
+                    &::before {
+                        content: "";
+                        width: 20px;
+                        height: 20px;
+                        background: url(../img/close.svg) no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                        position: absolute;
+                        right: 2px;
+                        top: 2px;
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+        
+
+        &__logo {
+            width: 40px;
+            height: 38px;
+        }
+
+        &__profile-button {
+            width: 44px;
+            height: 44px;   
+            background: #0020360D;
+            border: 1px solid #00203626;
+            border-radius: 50%;    
+            position: relative;   
+            transition: 0.3s;
+            
+            &::before {
+                content: "";
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background: url(../img/close.svg) no-repeat;
+                transition: .3s;     
+                visibility: hidden;
+                opacity: 0;           
+            }
+
+            &_active::before {
+                opacity: 1;
+                visibility: visible;
+            }
+                        
+        }     
+
+        &__user {
+            transition: .3s;
+
+            &_hidden {
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+          
+    }
+}

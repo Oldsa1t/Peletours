@@ -1,0 +1,38 @@
+<section class="menu @@class">
+    
+    <ul class="menu__list">
+        @@loop('./menu/__item/__item.html', [
+        {   
+            "item": "menu__item menu__item_active", 
+            "href": "index.html", 
+            "link": "menu__link", 
+            "text": "ראשי"
+        },
+        {
+            "item": "menu__item", 
+            "href": "tourism.html", 
+            "link": "menu__link", 
+            "text": "תיירות"
+        },
+        {
+            "item": "menu__item", 
+            "href": "communication.html", 
+            "link": "menu__link", 
+            "text": "תקשורת"
+        },
+        {
+            "item": "menu__item", 
+            "href": "payment.html", 
+            "link": "menu__link", 
+            "text": "תשלומים"
+        },
+        {
+            "item": "menu__item",
+            "href": "gift.html", 
+            "link": "menu__link", 
+            "text": "Gift Card"
+        }               
+        ])
+    </ul>
+
+</section> 

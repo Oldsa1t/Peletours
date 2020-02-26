@@ -1,0 +1,17 @@
+.title {
+    margin: 0;
+    font-weight: bold;
+    color: $color-dark-blue;
+
+    &__h1 {    
+        font-size: 36px;             
+    }
+
+    &__h2 {
+        font-size: 20px;
+    }
+
+    &__h3 {
+        font-size: 24px;
+    }    
+}

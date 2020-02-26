@@ -1,0 +1,85 @@
+<section class="entertainment @@class">
+    <h2 class="title title__h2 entertainment__title">דברים לעשות בסביבה</h2>
+
+    <div class="entertainment__wrapper">
+        @@loop('./category-slider/category-slider.html', [            
+        {
+            "class": "entertainment__item",
+            "img-wrapper-class": "entertainment__img-wrapper",
+            "img-class": "entertainment__img",
+            "src": "assets/img/museum.png",
+            "tourprod": true,
+            "text": "מוזיאונים"
+        },
+        {
+            "class": "entertainment__item",
+            "img-wrapper-class": "entertainment__img-wrapper",
+            "img-class": "entertainment__img",
+            "src": "assets/img/stadium.png",
+            "tourprod": true,
+            "text": "כדורגל"
+        },
+        {
+            "class": "entertainment__item",
+            "img-wrapper-class": "entertainment__img-wrapper",
+            "img-class": "entertainment__img",
+            "src": "assets/img/market.png",
+            "tourprod": true,
+            "text": "שווקים"
+        },
+        {
+            "class": "entertainment__item",
+            "img-wrapper-class": "entertainment__img-wrapper",
+            "img-class": "entertainment__img",
+            "src": "assets/img/church.png",
+            "tourprod": true,
+            "text": "פארקים"
+        }
+        ])
+    </div>   
+
+    <div class="entertainment__slider">
+        <div class="entertainment__slider-wrapper owl-carousel js-entertainment-carousel">
+            @@loop('./category-slider/category-slider.html', [            
+            {
+                "class": "entertainment__item",
+                "img-wrapper-class": "entertainment__img-wrapper",
+                "img-class": "entertainment__img",
+                "src": "assets/img/museum.png",
+                "tourprod": true,
+                "text": "מוזיאונים"
+            },
+            {
+                "class": "entertainment__item",
+                "img-wrapper-class": "entertainment__img-wrapper",
+                "img-class": "entertainment__img",
+                "src": "assets/img/stadium.png",
+                "tourprod": true,
+                "text": "כדורגל"
+            },
+            {
+                "class": "entertainment__item",
+                "img-wrapper-class": "entertainment__img-wrapper",
+                "img-class": "entertainment__img",
+                "src": "assets/img/market.png",
+                "tourprod": true,
+                "text": "שווקים"
+            },
+            {
+                "class": "entertainment__item",
+                "img-wrapper-class": "entertainment__img-wrapper",
+                "img-class": "entertainment__img",
+                "src": "assets/img/church.png",
+                "tourprod": true,
+                "text": "פארקים"
+            }
+            ])
+        </div> 
+
+        @@include('./category-slider/__controls/__controls.html', {
+            "class": ""
+        })
+
+    </div>    
+    
+</section>

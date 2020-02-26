@@ -1,0 +1,38 @@
+<section class="tourism-list">
+
+    @@include('./title/title.html', {
+        "num": "2",
+        "class": "tourism-list__title",
+        "text": "תיירות"
+    })
+
+    <div class="tourism-list__container">
+        @@loop('./tourism-list/__item/__item.html', [
+        {
+            "class": "",
+            "href": "",
+            "src": "assets/img/paris.png",
+            "place": "פריז"
+        },
+        {
+            "class": "",
+            "href": "",
+            "src": "assets/img/berlin.png",
+            "place": "ברלין"
+        },
+        {
+            "class": "",
+            "href": "",
+            "src": "assets/img/rome.png",
+            "place": "רומא"
+        },
+        {
+            "class": "",
+            "href": "",
+            "src": "assets/img/london.png",
+            "place": "לונדון"
+        }
+        ])
+    </div>    
+
+</section>

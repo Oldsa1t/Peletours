@@ -1,0 +1,185 @@
+.navbar {
+    height: 68px;
+    font-size: 20px;
+    color: $color-dark-blue;
+    padding-left: 22px;
+    padding-right: 19px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        width: 137px;
+        height: 22px;
+    }
+
+    &__button {
+        width: 30px;
+        height: 24px;
+    }
+
+    &__search {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s;
+
+        &_active {           
+            visibility: visible;
+            opacity: 1;
+        }
+
+        &-wrapper {
+            position: relative;
+        }
+        &-btn {
+            width: 110px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-left: 2px solid black;
+            position: relative;              
+        }
+    }
+    
+
+    &__loupe {
+        width: 24px;
+        height: 24px;
+        position: relative;          
+        margin-left: 20px;
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: url(../img/search.svg) no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.3s;
+        }
+
+        &_active {
+            &::before {
+                content: "";
+                width: 20px;
+                height: 20px;
+                background: url(../img/close.svg) no-repeat;
+                background-size: contain;
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                transition: 0.3s;
+            }
+        }
+    }
+
+    &__menu {
+        max-width: 570px; 
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    &__start,
+    &__container,
+    &__wrapper,
+    &__login {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__start {
+        width: 310px;
+    }
+
+    &__container {
+        max-width: 890px;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }      
+
+    &__support {
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 21px;
+            height: 24px;
+            position: absolute;
+            background: url(../img/user-headset-dark.svg) no-repeat;
+            background-size: contain;
+            top: 3px;
+            right: -40px;
+            z-index: 10;
+        }
+
+        &::after {
+            content: "";
+            width: 44px;
+            height: 44px;
+            position: absolute;
+            background: #0020360D;
+            border: 1px solid #00203626;
+            border-radius: 50%;
+            top: -8px;
+            right: -52px;
+            z-index: 1;
+        }
+    }
+
+    &__number {
+        height: 38px;
+        display: flex;
+        align-items: center;
+        border-left: 2px solid $color-dark-blue;
+        padding-left: 22px;
+        margin-left: 70px;
+        margin-right: 60px;
+        box-sizing: border-box;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 44px;
+            height: 44px;
+            background: #0020360D;
+            border: 1px solid #00203626;
+            border-radius: 50%;
+            position: absolute;
+            right: -55px;
+            top: -2px;
+        }
+
+        &::after {
+            content: "";
+            width: 30px;
+            height: 30px;
+            background: url(../img/stars.svg) no-repeat;
+            background-size: contain;
+            background-position: center;
+            position: absolute;
+            right: -48px;
+            top: 6px;
+            filter: invert(100%);
+        }
+    }
+
+    &__login {
+        width: 150px;
+        margin-right: 50px;
+        // display: none;
+    }
+
+}
+
+@include md {
+    .navbar {
+        display: none;
+    }
+}

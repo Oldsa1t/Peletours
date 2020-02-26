@@ -1,0 +1,34 @@
+.menu {      
+
+    &__list {
+        width: 100%;
+        @include undone-list;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+        padding: 5px 10px;
+        border-radius: 19px;
+        transition: 0.3s;
+
+        &_active {
+            padding: 5px 10px;
+            background: #0020360D;
+            border: 1px solid #00203626;            
+        }
+
+        &:not(.menu__item_active):hover {
+            background: $hover;
+            padding: 5px 10px;
+        }
+        &:not(.menu__item_active):hover > .menu__link {
+            color: white;
+        }
+    }
+
+    &__link {
+        transition: .3s;
+    }
+}

@@ -1,0 +1,35 @@
+<nav class="navbar-mobile">
+
+    <section class="navbar-mobile__panel">
+
+        <div class="navbar-mobile__wrapper">
+            <button class="button navbar-mobile__menu-button">
+            </button>
+    
+            <button class="button navbar-mobile__search-btn">
+            </button> 
+        </div>                  
+
+        @@include('./search/search.html', {
+            "class": "navbar-mobile__search"
+        })
+
+        @@include('./logo/logo.html', {
+            "class": "navbar-mobile__logo",
+            "src": "assets/img/small-logo.png"
+        })
+
+        <button class="button navbar-mobile__profile-button">
+            <div class="navbar-mobile__user">
+                <img src="assets/img/user.svg" alt="">
+            </div>
+        </button>
+
+
+    </section>
+
+    @@include('./profile-mobile/profile-mobile.html', {
+    "class": "navbar-mobile__profile-mobile"
+    })
+
+</nav>

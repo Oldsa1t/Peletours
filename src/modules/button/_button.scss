@@ -1,0 +1,12 @@
+.button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;  
+    font-size: 18px;  
+    font-family: $font-family;
+    cursor: pointer;
+    transition: 0.3s;
+    outline: none;
+    color: $color-dark-blue;
+}

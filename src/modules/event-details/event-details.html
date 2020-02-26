@@ -1,0 +1,34 @@
+<section class="event-details @@class">
+
+    @@if(context.tour == true) {
+        <button class="button event-details__top-btn">
+            <h2 class="title title__h2 event-details__title">פרטי אירוע</h2>
+        </button>
+    }    
+
+    <div class="event-details__wide-wrapper">
+        <div class="event-details__wrapper">
+            <div class="event-details__container">
+                <div class="event-details__day">
+                    <b class="event-details__day-value">21/1</b>
+                    <p class="text event-details__day-dayofweek">שישי</p>
+                </div>
+                <div class="event-details__place">
+                    <b class="event-details__place-value">@@place.value</b>
+                    <p class="text event-details__place-time">@@place.time</p>
+                </div>
+                <div class="event-details__site">
+                    <b class="event-details__site-value">@@site</b>
+                    <p class="text event-details__site-details">שורה 13, כסאות 4, 5</p>
+                </div>
+            </div>
+        </div>    
+        @@if(context.tour == true) {
+            <button class="button event-details__button">
+                <div class="tourism-product__add-btn"></div>
+                <span class="event-details__span">כרטיסים נוספים</span>        
+            </button>
+        }        
+    </div>    
+
+</section>

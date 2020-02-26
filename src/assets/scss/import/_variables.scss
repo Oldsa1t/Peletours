@@ -1,0 +1,24 @@
+$color-black: #000000;
+$color-white: #ffffff;
+$color-red: #F93959;
+$color-dark-blue: #002036;
+$color-line: #B2BBC2;
+$color-bg: #DFE0E3;
+$hover: #0071BC;
+$disabled: #B2BBC2;
+$normal: #29ABE2;
+$font-family: "Open Sans Hebrew";
+
+
+
+$grid-breakpoints: (
+    sm: 0,
+    md: 768px,
+    lg: 1366px
+);
+
+$container-max-widths: (
+    sm: 100%,
+    md: 700px,
+    lg: 1200px
+);

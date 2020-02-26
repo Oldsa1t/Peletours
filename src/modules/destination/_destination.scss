@@ -1,0 +1,79 @@
+.destination {
+    width: 100%;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $color-line;
+        position: absolute;
+        left: 0;
+        bottom: -25px;
+    }
+
+    &__title {
+        display: flex;
+    }
+
+    &__info  {
+        margin-top: 20px;
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__stars {
+        margin-left: 5px;
+    }
+
+    &__star {
+        width: 16px;
+        height: 16px;
+    }
+
+    &__socials {
+        display: flex;
+        margin-top: 40px;
+
+        &-wrapper {
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+            flex-basis: 190px;
+            margin-right: 20px;
+        }
+    }
+}
+
+@include sm {
+    .destination {
+        width: auto;
+
+        &::before {
+            bottom: -30px;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__wrapper {
+            display: block;
+            margin-top: 5px;
+        }
+
+        &__info {
+            margin-top: 25px;
+        }
+
+        &__socials {
+            margin-top: 20px;
+        }
+
+        &__share {
+            margin-left: 10px;
+        }
+    }
+}
